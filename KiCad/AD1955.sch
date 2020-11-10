@@ -1,5 +1,6 @@
 EESchema Schematic File Version 4
-EELAYER 30 0
+LIBS:FA-DAC-cache
+EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -310,8 +311,6 @@ F 3 "" H 6000 5050 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6000 4950 6000 5000
-Wire Wire Line
 	5800 2650 5800 2200
 Wire Wire Line
 	5800 2200 5600 2200
@@ -362,7 +361,7 @@ AR Path="/5C33EBCC" Ref="C?"  Part="1"
 AR Path="/5E9652D9/5C33EBCC" Ref="C202"  Part="1" 
 F 0 "C202" H 7192 2396 50  0000 L CNN
 F 1 "47u" H 7192 2305 50  0000 L CNN
-F 2 "" H 7100 2350 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 7100 2350 50  0001 C CNN
 F 3 "~" H 7100 2350 50  0001 C CNN
 	1    7100 2350
 	1    0    0    -1  
@@ -465,22 +464,12 @@ Wire Wire Line
 Wire Wire Line
 	6200 1850 6200 1950
 Wire Wire Line
-	5800 4650 5800 5000
-$Comp
-L Device:Net-Tie_2 NT1
-U 1 1 5EAE612C
-P 5900 5000
-F 0 "NT1" H 5900 5181 50  0000 C CNN
-F 1 "Net-Tie_2" H 5900 5090 50  0000 C CNN
-F 2 "NetTie:NetTie-2_SMD_Pad0.5mm" H 5900 5000 50  0001 C CNN
-F 3 "~" H 5900 5000 50  0001 C CNN
-	1    5900 5000
-	1    0    0    -1  
-$EndComp
-Connection ~ 5800 5000
+	5800 4650 5800 4950
 Wire Wire Line
-	5800 5000 5800 5050
-Connection ~ 6000 5000
+	6000 4950 6000 5050
 Wire Wire Line
-	6000 5000 6000 5050
+	6000 4950 5800 4950
+Connection ~ 5800 4950
+Wire Wire Line
+	5800 4950 5800 5050
 $EndSCHEMATC
